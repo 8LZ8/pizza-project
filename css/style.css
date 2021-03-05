@@ -1,1 +1,64 @@
-/* No CSS *//*# sourceMappingURL=style.css.map */
+header {
+  background-color: #d52941;
+}
+
+header h1 {
+  color: #d5d5d5;
+}
+
+footer {
+  background-color: #151515;
+}
+
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+body, html {
+  height: 100%;
+}
+
+body {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: auto;
+      grid-template-columns: auto;
+  -ms-grid-rows: 40px auto 40px;
+      grid-template-rows: 40px auto 40px;
+  font-family: "Lato", sans-serif;
+}
+
+.fancyFont {
+  font-family: "Lobster Two", cursive;
+}
+
+main div img {
+  width: 100%;
+  -webkit-filter: brightness(50%);
+          filter: brightness(50%);
+}
+
+.imgButtons {
+  position: relative;
+  text-align: center;
+}
+
+.imgButtons .buttons {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  color: #d5d5d5;
+}
+
+.imgButtons .buttons a {
+  text-align: center;
+  border: 2px solid #d5d5d5;
+}
+
+.imgButtons .buttons a:link, .imgButtons .buttons a:visited {
+  color: #d5d5d5;
+}
+/*# sourceMappingURL=style.css.map */
