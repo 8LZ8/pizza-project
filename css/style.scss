@@ -14,7 +14,7 @@ body, html {
 body {
     display: grid;
     grid-template-columns: auto;
-    grid-template-rows: 40px auto 40px;
+    grid-template-rows: auto 1fr auto;
     font-family: $font-family;
 }
 
@@ -40,9 +40,17 @@ main {
         left: 50%;
         transform: translate(-50%, -50%);
         color: $white;
+        text-shadow: 2px 2px 4px $black;
+        display: grid;
+        grid-gap: 20px;
+        p {
+            padding-bottom: 7px;
+        }
         a {
             text-align: center;
             border: 2px solid $white;
+            padding: 5px;
+            border-radius: 5px;
         }
         a:link, a:visited {
             color: $white;
@@ -50,4 +58,86 @@ main {
     }
 }
 
+.backgPrimary {
+    background-color: $primary;
+    color: $white;
+}
 
+.backgSecondary {
+    background-color: $secondary;
+}
+
+.backgPrimaryDark {
+    background-color: $primary-dark;
+    color: $white;
+}
+
+.backgGreen {
+    background-color: $green;
+    color: $black;
+}
+
+.backgBlue {
+    background-color: $blue;
+    color: $white;
+}
+
+.backgSecondaryDark {
+    background-color: $secondary-dark;
+}
+
+.special {
+    font-weight: bold;
+}
+
+.textCenter { 
+    text-align: center;
+}
+
+.video {
+    width: 100%;
+}
+
+img {
+    width: 100%;
+    display: inherit;
+}
+
+.block {
+    padding: 1.75em 1em;
+}
+
+.menu {
+  h1 {
+    font-family: $fancy-font-family;
+  }
+
+  .special {
+    border-radius: 5px;
+    margin: 1.5em 0;
+  }
+
+  .itemMenu {
+      margin: 1em 0em;
+      font-size: 14px;
+  }
+  .priceMenu {
+      font-weight: bold;
+      font-size: 16px;
+      margin-left: 5px;
+  }
+}
+
+.mapResponsive {
+    overflow: hidden;
+    padding-bottom: 56.25%;
+    position: relative;
+    height: 0;
+    iframe {
+        left: 0;
+        top: 0;
+        height: 100%;
+        width: 100%;
+        position: absolute;
+    }    
+}

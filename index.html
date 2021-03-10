@@ -11,43 +11,65 @@
 </head>
 <body>
     <header>
-        <h1 class="fancyFont">Okotoks Pizza</h1>
+        <p class="banner">Ph: <a href="tel:555-555-5555">555-555-5555</a></p>
+        <div class="headerNav">
+            <h1 class="fancyFont">Okotoks Pizza</h1>
+
+            <nav>
+                <div>
+                    <input type="checkbox">
+
+                    <span></span>
+                    <span></span>
+                    <span></span>
+
+                    <ul>
+                        <a href="/"><li>Home</li></a>
+                        <a href="pages/aboutus.html"><li>About Us</li></a>
+                        <a href="pages/menu.html"><li>Menu</li></a>
+                        <a href="pages/location.html"><li>Location</li></a>
+                    </ul>
+                </div>
+            </nav>
+        </div>
     </header>
 
     <main>
         <div>
             <div class="imgButtons">
-                <img src="imgs/basil-pizza.jpg" alt="tomato, basil, mozarella pizza">
+                <img src="imgs/pizzaboard.jpg" alt="tomato, basil, mozarella pizza">
                 <div class="buttons">
                     <a href="pages/menu.html">Menu</a>
+                    <a href="pages/location.html">Location</a>
                     <div>
-                        <p>Phone Number</p>
-                        <a href="http://">555-555-5555</a>
+                        <a href="tel:555-555-5555">555-555-5555</a>
                     </div>
                 </div>
             </div>
+        <div class="backgPrimary block textCenter special">
+            <p>Specials from Sunday to Thursday after 10pm pizzas 50% off</p>
         </div>
-        <div>
-            <h1>Fresh</h1>
+        <div class="backgSecondary block">
+            <h1 class="fancyFont">Fresh</h1>
             <p>
                 Wood fire oven pizzas and fresh locally sourced ingredients with gluten free options.
             </p>
         </div>
-        <div>
-            <h1>How we make our pizza</h1>
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/sv3TXMSv6Lw" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime architecto dolores facilis laboriosam nam blanditiis in at doloremque delectus asperiores, et molestiae natus deleniti saepe velit ea ducimus voluptatibus? Quis.</p>
+        <div class="block">
+            <h1 class="fancyFont">How we make our pizza</h1>
+            <iframe class="video" src="https://www.youtube.com/embed/sv3TXMSv6Lw" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </div>
     </main>
 
     <footer>
         <div>
             <h1>Location</h1>
-            <p>555 8th Street, Okotoks AB</p> 
+            <p>555 8th Street, Okotoks AB</p>
+            <p>T5R 5D5</p>
         </div>
         <div>
             <h1>Phone Number</h1>
-            <p>555-555-5555</p>
+            <a href="tel:555-555-5555">555-555-5555</a>
         </div>
         <div>
             <h1>Hours</h1>
@@ -56,12 +78,9 @@
         </div>
         <div>
             <h1>Email</h1>
-            <p>pizza@okotokspizza.ml</p>
+            <a href="mailto:pizza@okotokspizza.ml">pizza@okotokspizza.ml</a>
         </div>
-        <div>
-
-        </div>
-        <div>
+        <div class="copyright">
             &#169; 2021 Okotoks Pizza
         </div>
     </footer>
