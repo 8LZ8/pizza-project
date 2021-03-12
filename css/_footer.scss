@@ -14,9 +14,43 @@ footer {
         color: $white;
     }
 
+    .social {
+        a {
+            font-size: 25px;
+            margin-right: 1.5em;
+        }
+    }
+
     .copyright {
         margin-top: 4em;
         text-align: center;
         font-size: 8px;
+    }
+}
+
+// Tablet
+@media only screen and (min-width: 600px) {
+    footer {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        padding-left: 5em;
+        padding-right: 5em;
+        .copyright {
+            grid-column: 1/-1;
+        }
+    }
+}
+
+// Desktop
+@media only screen and (min-width: 950px) {
+    .group {
+        text-align: center;
+    }
+    footer {
+        .social {
+            a {
+                margin: 0 1em;
+            }
+        }
     }
 }

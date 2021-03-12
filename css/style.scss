@@ -18,6 +18,12 @@ body {
     font-family: $font-family;
 }
 
+img {
+    width: 100%;
+    display: inherit;
+    object-fit: cover;
+}
+
 .fancyFont {
     font-family: $fancy-font-family;
 }
@@ -25,7 +31,6 @@ body {
 main {
     div {
         img {
-            width: 100%;
             filter: brightness(50%);
         }
     }
@@ -34,6 +39,7 @@ main {
 .imgButtons {
     position: relative;
     text-align: center;
+    font-size: 1.25em;
     .buttons {
         position: absolute;
         top: 50%;
@@ -50,7 +56,7 @@ main {
             text-align: center;
             border: 2px solid $white;
             padding: 5px;
-            border-radius: 5px;
+            border-radius: $corner-radius;
         }
         a:link, a:visited {
             color: $white;
@@ -98,34 +104,29 @@ main {
     width: 100%;
 }
 
-img {
-    width: 100%;
-    display: inherit;
-}
-
 .block {
     padding: 1.75em 1em;
 }
 
 .menu {
-  h1 {
-    font-family: $fancy-font-family;
-  }
+    h1 {
+        font-family: $fancy-font-family;
+    }
 
-  .special {
-    border-radius: 5px;
-    margin: 1.5em 0;
-  }
+    .special {
+        border-radius: $corner-radius;
+        margin: 1.5em 0;
+    }
 
-  .itemMenu {
-      margin: 1em 0em;
-      font-size: 14px;
-  }
-  .priceMenu {
-      font-weight: bold;
-      font-size: 16px;
-      margin-left: 5px;
-  }
+    .itemMenu {
+        margin: 1em 0em;
+        font-size: 14px;
+    }
+    .priceMenu {
+        font-weight: bold;
+        font-size: 16px;
+        margin-left: 5px;
+    }
 }
 
 .mapResponsive {
@@ -141,3 +142,73 @@ img {
         position: absolute;
     }    
 }
+
+// Tablet
+@media only screen and (min-width: 600px) {
+    .menu {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        .block {
+            background-color: $pureWhite;
+            border: 1px solid $black;
+        }
+
+        .expandBackgSecondary {
+            background-color: $secondary;
+        }
+
+        .special {
+            background-color: $primary;
+        }
+    }
+
+    .video {
+        height: 40vh;
+    }
+}
+
+// Desktop
+@media only screen and (min-width: 950px) {
+    img {
+        height: 70vh;
+    }
+
+    .video {
+        height: 60vh;
+    }
+
+    .block {
+        margin: 2em 5%;
+        border-radius: $corner-radius;
+    }
+
+    .split {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        padding: 2em;
+        grid-column-gap: 50px;
+        .block {
+            display: grid;
+            text-align: center;
+            margin: 0;
+        }
+    }
+
+    #centerSpag {
+        object-position: 50% 70%;
+    }
+
+    .aboutUs {
+        display: grid;
+        > div {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            place-items: center;
+            padding: 30px;
+            img {
+                max-height: 400px;
+            }
+        }
+    }
+}
+

@@ -17,7 +17,10 @@ header {
         background-color: $primary;
     
         h1 {
-            color: $white;
+            a {
+                text-decoration: none;
+                color: $white;
+            }
             padding-left: 0.5em;
         }
     
@@ -44,7 +47,7 @@ header {
                 }
     
                 input:checked ~ ul {
-                    opacity: 1;
+                    visibility: visible;
                 }
     
                 span {
@@ -61,14 +64,12 @@ header {
                 ul {
                     position: absolute;
                     width: 90px;
-                    margin: -100px 0 0 -50px;
                     padding: 30px;
-                    padding-top: 125px;
                     list-style-type: none;
-                    left: -58px;
+                    left: -108px;
                     background-color: $primary;
                     text-align: center;
-                    opacity: 0;
+                    visibility: hidden;
                     a {
                         color: $white;
                     }
@@ -81,4 +82,39 @@ header {
             }
         }
     }    
+}
+
+// Desktop
+@media only screen and (min-width: 950px) {
+    header {
+        .headerNav {
+            nav {
+                div {
+                    input, span {
+                        display: none;
+                    }
+
+                    ul {
+                        visibility: visible;
+                        position: static;
+                        left: 0;
+                        width: auto;
+                        margin: 0;
+                        padding: 0;
+                        li {
+                            display: inline;
+                            
+                        }
+                        a {
+                            padding: 0.7em 1em 0.6em 1em;                           
+                        }
+                        a:hover {
+                            background-color: $primary-dark;
+                            font-weight: bold;
+                        }
+                    }
+                }
+            }
+        }
+    }
 }

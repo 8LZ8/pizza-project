@@ -19,8 +19,12 @@ header .headerNav {
 }
 
 header .headerNav h1 {
-  color: #F0F0F0;
   padding-left: 0.5em;
+}
+
+header .headerNav h1 a {
+  text-decoration: none;
+  color: #F0F0F0;
 }
 
 header .headerNav nav {
@@ -53,7 +57,7 @@ header .headerNav nav div input {
 }
 
 header .headerNav nav div input:checked ~ ul {
-  opacity: 1;
+  visibility: visible;
 }
 
 header .headerNav nav div span {
@@ -70,14 +74,12 @@ header .headerNav nav div span {
 header .headerNav nav div ul {
   position: absolute;
   width: 90px;
-  margin: -100px 0 0 -50px;
   padding: 30px;
-  padding-top: 125px;
   list-style-type: none;
-  left: -58px;
+  left: -108px;
   background-color: #d52941;
   text-align: center;
-  opacity: 0;
+  visibility: hidden;
 }
 
 header .headerNav nav div ul a {
@@ -87,6 +89,30 @@ header .headerNav nav div ul a {
 header .headerNav nav div ul li {
   padding: 7px 0;
   font-size: 18px;
+}
+
+@media only screen and (min-width: 950px) {
+  header .headerNav nav div input, header .headerNav nav div span {
+    display: none;
+  }
+  header .headerNav nav div ul {
+    visibility: visible;
+    position: static;
+    left: 0;
+    width: auto;
+    margin: 0;
+    padding: 0;
+  }
+  header .headerNav nav div ul li {
+    display: inline;
+  }
+  header .headerNav nav div ul a {
+    padding: 0.7em 1em 0.6em 1em;
+  }
+  header .headerNav nav div ul a:hover {
+    background-color: #990d35;
+    font-weight: bold;
+  }
 }
 
 footer {
@@ -105,10 +131,38 @@ footer a {
   color: #F0F0F0;
 }
 
+footer .social a {
+  font-size: 25px;
+  margin-right: 1.5em;
+}
+
 footer .copyright {
   margin-top: 4em;
   text-align: center;
   font-size: 8px;
+}
+
+@media only screen and (min-width: 600px) {
+  footer {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+    padding-left: 5em;
+    padding-right: 5em;
+  }
+  footer .copyright {
+    grid-column: 1/-1;
+  }
+}
+
+@media only screen and (min-width: 950px) {
+  .group {
+    text-align: center;
+  }
+  footer .social a {
+    margin: 0 1em;
+  }
 }
 
 * {
@@ -130,12 +184,18 @@ body {
   font-family: "Lato", sans-serif;
 }
 
+img {
+  width: 100%;
+  display: inherit;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
 .fancyFont {
   font-family: "Lobster Two", cursive;
 }
 
 main div img {
-  width: 100%;
   -webkit-filter: brightness(50%);
           filter: brightness(50%);
 }
@@ -143,6 +203,7 @@ main div img {
 .imgButtons {
   position: relative;
   text-align: center;
+  font-size: 1.25em;
 }
 
 .imgButtons .buttons {
@@ -166,7 +227,7 @@ main div img {
   text-align: center;
   border: 2px solid #F0F0F0;
   padding: 5px;
-  border-radius: 5px;
+  border-radius: 6px;
 }
 
 .imgButtons .buttons a:link, .imgButtons .buttons a:visited {
@@ -213,11 +274,6 @@ main div img {
   width: 100%;
 }
 
-img {
-  width: 100%;
-  display: inherit;
-}
-
 .block {
   padding: 1.75em 1em;
 }
@@ -227,7 +283,7 @@ img {
 }
 
 .menu .special {
-  border-radius: 5px;
+  border-radius: 6px;
   margin: 1.5em 0;
 }
 
@@ -255,5 +311,73 @@ img {
   height: 100%;
   width: 100%;
   position: absolute;
+}
+
+@media only screen and (min-width: 600px) {
+  .menu {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+  }
+  .menu .block {
+    background-color: #FFFFFF;
+    border: 1px solid #151515;
+  }
+  .menu .expandBackgSecondary {
+    background-color: #fcd581;
+  }
+  .menu .special {
+    background-color: #d52941;
+  }
+  .video {
+    height: 40vh;
+  }
+}
+
+@media only screen and (min-width: 950px) {
+  img {
+    height: 70vh;
+  }
+  .video {
+    height: 60vh;
+  }
+  .block {
+    margin: 2em 5%;
+    border-radius: 6px;
+  }
+  .split {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+    padding: 2em;
+    grid-column-gap: 50px;
+  }
+  .split .block {
+    display: -ms-grid;
+    display: grid;
+    text-align: center;
+    margin: 0;
+  }
+  #centerSpag {
+    -o-object-position: 50% 70%;
+       object-position: 50% 70%;
+  }
+  .aboutUs {
+    display: -ms-grid;
+    display: grid;
+  }
+  .aboutUs > div {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
+    place-items: center;
+    padding: 30px;
+  }
+  .aboutUs > div img {
+    max-height: 400px;
+  }
 }
 /*# sourceMappingURL=style.css.map */
