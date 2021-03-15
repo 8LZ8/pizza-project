@@ -91,6 +91,18 @@ header .headerNav nav div ul li {
   font-size: 18px;
 }
 
+@media only screen and (max-width: 600px) {
+  .pointerEvent {
+    pointer-events: visible;
+  }
+}
+
+@media only screen and (min-width: 600px) {
+  .pointerEvent {
+    pointer-events: none;
+  }
+}
+
 @media only screen and (min-width: 950px) {
   header .headerNav nav div input, header .headerNav nav div span {
     display: none;
@@ -343,6 +355,12 @@ main div img {
   }
 }
 
+#centerSpag {
+  height: 25vh;
+  -o-object-position: 50% 70%;
+     object-position: 50% 70%;
+}
+
 @media only screen and (min-width: 950px) {
   img {
     height: 70vh;
@@ -375,7 +393,7 @@ main div img {
     display: -ms-grid;
     display: grid;
   }
-  .aboutUs > div {
+  .aboutUs > article {
     display: -ms-grid;
     display: grid;
     -ms-grid-columns: 1fr 1fr 1fr;
@@ -383,7 +401,7 @@ main div img {
     place-items: center;
     padding: 30px;
   }
-  .aboutUs > div img {
+  .aboutUs > article img {
     max-height: 400px;
   }
 }

@@ -176,6 +176,10 @@ main {
     }
 }
 
+#centerSpag {
+    height: 25vh;
+    object-position: 50% 70%;
+}
 // Desktop
 @media only screen and (min-width: 950px) {
     img {
@@ -209,7 +213,7 @@ main {
 
     .aboutUs {
         display: grid;
-        > div {
+        > article {
             display: grid;
             grid-template-columns: 1fr 1fr 1fr;
             place-items: center;

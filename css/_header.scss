@@ -84,6 +84,20 @@ header {
     }    
 }
 
+// Mobile
+@media only screen and (max-width: 600px) {
+    .pointerEvent {
+        pointer-events: visible;
+    }
+}
+
+//Tablet and Desktop
+@media only screen and (min-width: 600px) {
+    .pointerEvent {
+        pointer-events: none;
+    }
+}
+
 // Desktop
 @media only screen and (min-width: 950px) {
     header {
