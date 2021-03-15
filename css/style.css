@@ -330,6 +330,14 @@ main div img {
   .menu .special {
     background-color: #d52941;
   }
+  .mobileOnly {
+    display: none;
+  }
+  #centerSpag {
+    height: 25vh;
+    -o-object-position: 50% 70%;
+       object-position: 50% 70%;
+  }
   .video {
     height: 40vh;
   }
@@ -361,8 +369,7 @@ main div img {
     margin: 0;
   }
   #centerSpag {
-    -o-object-position: 50% 70%;
-       object-position: 50% 70%;
+    height: 70vh;
   }
   .aboutUs {
     display: -ms-grid;

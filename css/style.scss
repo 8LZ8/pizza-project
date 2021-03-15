@@ -162,6 +162,15 @@ main {
         }
     }
 
+    .mobileOnly {
+        display: none;
+    }
+
+    #centerSpag {
+        height: 25vh;
+        object-position: 50% 70%;
+    }
+
     .video {
         height: 40vh;
     }
@@ -195,7 +204,7 @@ main {
     }
 
     #centerSpag {
-        object-position: 50% 70%;
+        height: 70vh;
     }
 
     .aboutUs {
